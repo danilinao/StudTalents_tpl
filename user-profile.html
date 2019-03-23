@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dimplom</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.css">
+    <link rel="stylesheet" href="assets/css/Social-Icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="margin: 2%;">
+    <div class="container border rounded shadow-lg" style="padding: 1%;">
+        <div class="row">
+            <div class="col-sm-5 col-lg-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="row" style="margin-bottom: 5%;">
+                            <div class="col text-center" style="padding: 15px;padding-top: 0;"><img class="rounded-circle" src="assets/img/no-photo.gif" width="100%" style="margin-top: 10%;"></div>
+                            <div class="col text-left">
+                                <h4>Иванов</h4>
+                                <h4>Иван</h4>
+                                <h4>Иванович</h4>
+                                <hr><a href="#">Изменить данные</a><a class="btn btn-info btn-block btn-sm" role="button" href="login-form.html" style="margin-top: 5%;">Выйти</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Пройти тест на профориентацию</button>			<script>
+var catAndActs = [];
+catAndActs['090303'] = [['(06.001) Программист ', '06001'], ['(06.015) Специалист по информационным системам', '06015'], ['(06.016) Руководитель проектов в области информационных технологий', '06016'], ['(06.017) Руководитель разработки программного обеспечения', '06017'], ['(06.022) Системный аналитик', '06022']];
+
+
+function ChangecatList() {
+    var catList = document.getElementById("validationCustom03");
+    var actList = document.getElementById("validationCustom04");
+    var selCat = catList.options[catList.selectedIndex].value;
+    while (actList.options.length) {
+        actList.remove(0);
+    }
+    var cats = catAndActs[selCat];
+    if (cats) {
+        var i;
+        for (i = 0; i < cats.length; i++) {
+            var cat = new Option(cats[i][0], cats[i][1]);
+            actList.options.add(cat);
+        }
+    }
+} 
+</script>
+<div role="dialog" tabindex="-1" class="modal fade" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Выберите тест для прохождения</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            
+			<form class="border rounded shadow-lg" style="padding: 3%;padding-bottom: 1%;min-width: 30%;" action="pass-test.html" method="GET">
+			<div class="modal-body">
+			<div class="form-group"><label style="font-weight: bold;color: rgb(107,104,105);">Выберите направление обучения</label><select name="napravlenie"class="custom-select custom-select-lg" id="validationCustom03" onchange="ChangecatList()"><optgroup label="(090000) Информатика и вычислительная техника" required><option value="12" selected>(09.03.01) Информатика и вычислительная техника	</option><option value="090302">(09.03.02) Информационные системы и технологии	</option><option value="090303">(09.03.03) Прикладная информатика</option></optgroup></select></div>
+    <div
+        class="form-group"><label style="color: rgb(107,104,105);font-weight: bold;">Выберите профстандарт</label><select required class="custom-select custom-select-lg" id="validationCustom04" name="prof"></select></div>
+        
+            </div>
+            <div class="modal-footer">
+			 <div class="form-group d-xl-flex justify-content-xl-center align-items-xl-center"
+            style="margin-top: 1%;"><button class="btn btn-info border rounded shadow-sm btn-block" type="submit">Начать тестирование</button></div>
+			</div>
+			
+        </div>
+    </div>
+</div></div>
+                </div>
+                <div class="row">
+                    <div class="col"><label class="col-form-label" style="font-size: 21px;font-weight: bold;color: rgb(93,99,105);">Ваши предыдущие результаты</label></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-sm-flex d-xl-flex align-items-sm-center justify-content-xl-center"><img src="assets/img/chart.png" width="100%"></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/highlight.min.js"></script>
+</body>
+
+</html>
